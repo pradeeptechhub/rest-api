@@ -79,16 +79,15 @@ public class HomeController {
         if(entry.getValue() instanceof List){
             System.out.println("LIST->"+entry.getValue());
             // using iterators
-            Iterator itr = ((List) entry.getValue()).iterator();
-            while(itr.hasNext()) {
-                Object entry1 = itr.next();
-                if(entry1 instanceof Map) {
-                    for (Map.Entry<?, ?> entry2 : ((Map<?,?>) entry1).entrySet()) {
+            for (Object entry1 : (List) entry.getValue()) {
+                if (entry1 instanceof Map) {
+                    for (Map.Entry<?, ?> entry2 : ((Map<?, ?>) entry1).entrySet()) {
                         iterableMethod(entry2);
                     }
                 }
             }
         }
+        String employee = null;
         if(entry.getValue() instanceof Map) {
             if(((Map) entry.getValue()).get("columns") != null) {
                 System.out.println("|Columns1->" + Arrays.toString(((Map) ((Map) entry.getValue()).get("columns")).keySet().stream().toArray()));
@@ -100,9 +99,8 @@ public class HomeController {
                 System.out.println("|Table1->" + ((Map)((Map) entry.getValue()).get("table")).keySet().stream().findFirst().get());
             }
             // using iterators
-            Iterator itr = ((Map) entry.getValue()).entrySet().iterator();
-            while(itr.hasNext()) {
-                Map.Entry<?, ?> entry1 = (Map.Entry<?, ?>) itr.next();
+            for (Object o : ((Map) entry.getValue()).entrySet()) {
+                Map.Entry<?, ?> entry1 = (Map.Entry<?, ?>) o;
                 iterableMethod(entry1);
             }
          }else{

@@ -8,7 +8,8 @@ import java.util.Map;
 public class RequestPojo {
     private String service_name;
     private String userid;
-    List<Data> data;
+    //List<Data> data;
+    Data data;
     //private Map<String, Data> data = new HashMap<String, Data>();
 }
 
