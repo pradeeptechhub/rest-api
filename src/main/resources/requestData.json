@@ -1,23 +1,67 @@
-{
-  "service_name": "EMP_DATA",
-  "userid" : "20001",
-  "data": {
-    "operation": "insert",
-    "table" : {
-      "employee" : {
-        "columns": {
-          "name" : "pradeep",
-          "department" : "IT"
-        },
-        "ref" : {
-          "dep_id" : {
-            "dep_code": "100"
+[
+  {
+    "service_name": "EMP_DATA",
+    "userid" : "20001",
+    "data": {
+      "operation": "insert",
+      "table" : {
+        "employee" : {
+          "columns": {
+            "first_name" : "pradeep",
+            "last_name" : "patel"
           },
-          "add_id" : {
-            "city_code": "mum"
+          "ref" : {
+            "dep_id" : {
+              "dep_code": "10800"
+            },
+            "add_id" : {
+              "city_code": "mum"
+            }
           }
         }
       }
     }
+  },
+
+  {
+    "service_name": "EMP_DATA",
+    "userid" : "20001",
+    "data": [{
+      "operation": "insert",
+      "table" : {
+        "employee" : {
+          "columns": {
+            "first_name" : "pradeep",
+            "last_name" : "patel"
+          },
+          "ref" : {
+            "dep_id" : {
+              "dep_code": "100"
+            },
+            "add_id" : {
+              "city_code": "mum"
+            }
+          }
+        }
+      }
+    }, {
+      "operation": "update",
+      "table" : {
+        "employee" : {
+          "columns": {
+            "fist_name" : "ramesh",
+            "last_name" : "patil"
+          },
+          "ref" : {
+            "dep_id" : {
+              "dep_code": "200"
+            },
+            "add_id" : {
+              "city_code": "del"
+            }
+          }
+        }
+      }
+    }]
   }
-}
+]
