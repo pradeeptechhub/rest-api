@@ -1,0 +1,23 @@
+{
+  "service_name": "EMP_DATA",
+  "userid" : "20001",
+  "data": {
+    "operation": "insert",
+    "table" : {
+      "employee" : {
+        "columns": {
+          "name" : "pradeep",
+          "department" : "IT"
+        },
+        "ref" : {
+          "dep_id" : {
+            "dep_code": "100"
+          },
+          "add_id" : {
+            "city_code": "mum"
+          }
+        }
+      }
+    }
+  }
+}
